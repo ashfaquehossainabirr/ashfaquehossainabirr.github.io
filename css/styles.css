@@ -1,0 +1,589 @@
+/*=================================================
+-- Reset 
+=================================================*/
+
+*,
+*::before, 
+*::after  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+
+::selection{
+    background-color: #888 ;
+    color: white;
+}
+
+
+/*================================================= 
+-- Variables
+=================================================*/
+
+:root {
+    /*------------------------------
+    ** Colors 
+    ------------------------------*/
+
+    --white: #fff;
+    --accent: hsl(229, 76%, 66%);
+    --accent-dark: hsl(229, 76%, 56%);
+
+
+    /*------------------------------
+    ** Transitions
+    ------------------------------*/
+
+    --trans-fast-xl: all 0.3s ease;
+    --trans-fast: all 0.4s ease;
+    --trans-medium: all 0.5s ease;
+    --trans-slow: all 0.6s ease;
+    --trans-slow-xl: all 0.7s ease;
+    --trans-cb-1: 0.5s cubic-bezier(1, 0, 0.30, 0.70);
+}
+
+
+/*================================================= 
+-- Preset
+=================================================*/
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+span {
+    display: inline-block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img, button {
+    display: block;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/*================================================= 
+-- Reused Style
+=================================================*/
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+/*================================================= 
+-- Scrollbar Settings
+=================================================*/
+
+::-webkit-scrollbar { 
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: hsl(0, 0%, 90%); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark);
+}
+
+
+/*=================================================================*/
+/*                      TYPOGRAPHY                              
+/*=================================================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2f3640;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* h1 {
+    font-size: 36px;
+}
+  
+h2 {
+    font-size: 28px;
+}
+  
+h3 {
+    font-size: 24px;
+}
+  
+h4 {
+    font-size: 18px;
+} */
+
+
+/*=======================================| Web Styles starting from here |=======================================*/
+
+
+/*================================================= 
+-- Header Section
+=================================================*/
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #8f8f8f;
+    background: #18191a;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo-section a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+nav .logo-section h1 {
+    color: var(--white);
+}
+
+nav .nav-menu-section {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-menu-section ul {
+    display: flex;
+    column-gap: 25px;
+}
+
+nav .nav-menu-section ul li a {
+    font-weight: 700;
+    transition: var(--trans-medium);
+    color: var(--white);
+}
+
+nav .nav-menu-section ul li:hover a {
+    color: var(--accent);
+}
+
+
+/* Menu Icon */
+
+.mobile-nav-icon {
+    display: none;
+}
+
+.icon-container {
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+.bar1, .bar2 {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar3 {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+
+/*================================================= 
+-- Hero Section
+=================================================*/
+
+section.hero-section {
+    position: relative;
+    height: 105vh;
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    background: #18191a;
+}
+
+section.hero-section .contents {
+    margin: auto;
+    max-width: 540px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+section.hero-section .contents img {
+    height: 150px;
+    margin: 0 auto 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid hsl(0, 0%, 90%);
+    box-shadow: 0 10px 15px 5px #2f364015;
+}
+
+section.hero-section .contents h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: var(--white);
+}
+
+section.hero-section .contents h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: var(--white);
+}
+
+section.hero-section .contents span {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--white);
+}
+
+section.hero-section .contents .hero-btn a {
+    position: relative;
+    margin: 0 auto; 
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 20px; 
+    color: var(--white);
+    background: var(--accent-dark);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+section.hero-section .contents .hero-btn a:hover {
+    -webkit-animation-name: button-push;
+    animation-name: button-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+section.hero-section .contents .hero-btn a:active {
+    background: var(--accent);
+}
+
+@keyframes button-push {
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+section.hero-section ul.social-icons {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    margin-bottom: 20px;
+}
+
+section.hero-section ul.social-icons li a {
+    font-size: 20px;
+    transition: var(--trans-medium);
+    color: var(--white);
+}
+
+section.hero-section ul.social-icons li:hover a {
+    color: var(--accent);
+}
+
+
+/*=================================================================*/
+/*                      Mouse Scroll Animation                            
+/*=================================================================*/
+
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroll-down.light span {
+    color: #454360;
+}
+
+.scroll-down.light .mouse {
+    border-color: #18191a;
+}
+
+.scroll-down.light .mouse .wheel {
+    background: #18191a;
+}
+
+@-webkit-keyframes ani-mouse {
+    0% {
+      top: 29%;
+    }
+    15% {
+      top: 50%;
+    }
+    50% {
+      top: 50%;
+    }
+    100% {
+      top: 29%;
+    }
+}
+@keyframes ani-mouse {
+    0% {
+      top: 29%;
+    }
+    15% {
+      top: 50%;
+    }
+    50% {
+      top: 50%;
+    }
+    100% {
+      top: 29%;
+    }
+}
+
+.mouse-wrapper {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    max-width: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+.mouse-wrapper:hover {
+    color: #fff;
+}
+  
+.mouse {
+    border: solid 2px #fff;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    height: 26px;
+    position: relative;
+    width: 20px;
+}
+
+.mouse .wheel {
+    background: #fff;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 4px;
+    width: 4px;
+    -webkit-animation: ani-mouse 2s linear infinite;
+    animation: ani-mouse 2s linear infinite;
+}
+
+
+/*=================================================================*/
+/*                      PARALLAX SHAPES                              
+/*=================================================================*/
+
+.parallax {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.parallax .layer {
+    position: absolute;
+}
+
+.parallax .p1 {
+    left: 10%;
+    top: 10%;
+}
+
+.parallax .p2 {
+    left: 25%;
+    top: 30%;
+}
+
+.parallax .p3 {
+    left: 15%;
+    bottom: 30%;
+}
+
+.parallax .p4 {
+    left: 10%;
+    bottom: 10%;
+}
+
+.parallax .p5 {
+    left: 45%;
+    top: 10%;
+}
+
+.parallax .p6 {
+    left: 40%;
+    bottom: 10%;
+}
+
+.parallax .p7 {
+    top: 20%;
+    right: 30%;
+}
+
+.parallax .p8 {
+    right: 30%;
+    bottom: 20%;
+}
+
+.parallax .p9 {
+    right: 10%;
+    top: 10%;
+}
+
+.parallax .p10 {
+    top: 45%;
+    right: 20%;
+}
+
+.parallax .p11 {
+    bottom: 10%;
+    right: 10%;
+}
+
+
+/*=================================================================*/
+/*              Media Queries (Responsive Devices)                           
+/*=================================================================*/
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 75px; /* 380px */
+        transition: 0.4s;
+    }
+
+    header.active-nav {
+        height: 380px;
+    }
+
+    .mobile-nav-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav .nav-menu-section ul {
+        display: none;
+        flex-direction: column;
+        row-gap: 25px;
+        position: absolute;
+        left: 30px;
+        top: 28%;
+        transition: 0.5s;
+    }
+
+    nav .nav-menu-section ul.active-nav {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .parallax .p1 {
+      left: 10%;
+      top: 10%;
+    }
+    .parallax .p2 {
+      left: 15%;
+      top: 30%;
+    }
+    .parallax .p3 {
+      left: 10%;
+      bottom: 30%;
+    }
+    .parallax .p4 {
+      left: 10%;
+      bottom: 10%;
+    }
+    .parallax .p5 {
+      left: 45%;
+      top: 3%;
+    }
+    .parallax .p6 {
+      left: 40%;
+      bottom: 10%;
+    }
+    .parallax .p7 {
+      top: 20%;
+      right: 30%;
+    }
+    .parallax .p8 {
+      right: 30%;
+      bottom: 20%;
+    }
+    .parallax .p9 {
+      right: 10%;
+      top: 5%;
+    }
+    .parallax .p10 {
+      top: 45%;
+      right: 10%;
+    }
+    .parallax .p11 {
+      bottom: 10%;
+      right: 10%;
+    }
+}
