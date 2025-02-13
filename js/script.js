@@ -53,12 +53,14 @@ $(window).on("load", function () {
 // =======================================================
 
 const headerSection = document.querySelector("header");
+var deviceMedia = window.matchMedia("(min-width: 769px)");
+
 
 window.onscroll = function() {
-  if(document.documentElement.scrollTop > 130) {
-    headerSection.style.padding = "10px 0";
+  if(deviceMedia.matches && document.documentElement.scrollTop > 130) {
+    headerSection.style.padding = "10px 0"
   } else {
-    headerSection.style.padding = "20px 0";
+    headerSection.style.padding = "20px 0"
   }
 }
 

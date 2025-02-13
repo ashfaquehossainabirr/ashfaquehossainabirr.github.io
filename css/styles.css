@@ -604,7 +604,7 @@ section.about-section {
 
 section.about-section .contents {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 9fr;
 }
 
 section.about-section .left-content {
@@ -612,7 +612,25 @@ section.about-section .left-content {
 }
 
 section.about-section .right-content {
+    position: relative;
     background: lightgreen;
+    z-index: 1;
+}
+
+section.about-section .right-content::before {
+    position: absolute;
+    left: -2%;
+    top: 30%;
+    content: '';
+    border-top: 25px solid transparent;
+	border-right: 50px solid #2f3640;
+	border-bottom: 25px solid transparent;
+    z-index: -1;
+}
+
+section.about-section .right-content .content-box {
+    background: #2f3640;
+    height: 400px;
 }
 
 
@@ -627,7 +645,7 @@ section.about-section .right-content {
     }
 
     header {
-        height: 75px; /* 380px */
+        height: 75px;
         transition: 0.4s;
     }
 
