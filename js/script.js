@@ -1,7 +1,15 @@
 $(window).on("load", function () {
     /*=========================================================================
+     Preloader
+     =========================================================================*/
+    
+     $("#preloader").delay(350).fadeOut("slow");
+
+
+    /*=========================================================================
      Parallax layers
      =========================================================================*/
+
     if($(".parallax").length > 0) {
       var scene = $(".parallax").get(0);
       var parallax = new Parallax(scene, {
@@ -13,6 +21,7 @@ $(window).on("load", function () {
     /*=========================================================================
      Text Rotating
      =========================================================================*/
+     
     $(".text-rotating").Morphext({
       // The [in] animation type. Refer to Animate.css for a list of available animations.
       animation: "bounceIn",
