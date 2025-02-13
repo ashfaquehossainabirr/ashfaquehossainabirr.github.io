@@ -511,6 +511,10 @@ section.hero-section ul.social-icons li:hover a {
 /*=================================================================*/
 
 @media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
     header {
         height: 75px; /* 380px */
         transition: 0.4s;
@@ -523,7 +527,7 @@ section.hero-section ul.social-icons li:hover a {
     .mobile-nav-icon {
         display: block;
         position: absolute;
-        right: 30px;
+        right: 20px;
     }
 
     nav .nav-menu-section ul {
@@ -531,13 +535,17 @@ section.hero-section ul.social-icons li:hover a {
         flex-direction: column;
         row-gap: 25px;
         position: absolute;
-        left: 30px;
+        left: 20px;
         top: 28%;
         transition: 0.5s;
     }
 
     nav .nav-menu-section ul.active-nav {
         display: flex;
+    }
+
+    section.hero-section {
+        height: 100vh;
     }
 }
 
