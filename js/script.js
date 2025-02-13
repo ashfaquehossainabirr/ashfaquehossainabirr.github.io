@@ -36,6 +36,21 @@ $(window).on("load", function () {
 })
 
 
+// =======================================================
+// -- Shrink Header Functionality
+// =======================================================
+
+const headerSection = document.querySelector("header");
+
+window.onscroll = function() {
+  if(document.documentElement.scrollTop > 130) {
+    headerSection.style.padding = "10px 0";
+  } else {
+    headerSection.style.padding = "20px 0";
+  }
+}
+
+
 // ==========================================================
 // -- Menu Icon Functionality
 // ==========================================================

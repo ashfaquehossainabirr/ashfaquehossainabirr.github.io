@@ -224,6 +224,7 @@ header {
     width: 100%;
     padding: 20px 0;
     border-bottom: 1px solid #8f8f8f;
+    transition: var(--trans-fast);
     background: #18191a;
     z-index: 9999;
 }
@@ -411,9 +412,7 @@ section.hero-section ul.social-icons li:hover a {
 }
 
 
-/*=================================================================*/
-/*                      Mouse Scroll Animation                            
-/*=================================================================*/
+/* Mouse Scroll Animation */
 
 .scroll-down {
     position: absolute;
@@ -505,9 +504,7 @@ section.hero-section ul.social-icons li:hover a {
 }
 
 
-/*=================================================================*/
-/*                      PARALLAX SHAPES                              
-/*=================================================================*/
+/* Parallax Shapes */
 
 .parallax {
     position: absolute;
@@ -575,6 +572,30 @@ section.hero-section ul.social-icons li:hover a {
     bottom: 10%;
     right: 10%;
 }
+
+
+/*================================================= 
+-- About Section
+=================================================*/
+
+section.about-section {
+    padding: 100px 0;
+    background: #f9f9ff;
+}
+
+section.about-section .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section.about-section .left-content {
+    background: lightblue;
+}
+
+section.about-section .right-content {
+    background: lightgreen;
+}
+
 
 
 /*=================================================================*/
