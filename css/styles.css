@@ -350,7 +350,7 @@ section.hero-section .contents img {
     margin: 0 auto 16px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid hsl(0, 0%, 90%);
+    border: 5px solid var(--white);
     box-shadow: 0 10px 15px 5px #2f364015;
 }
 
@@ -605,32 +605,47 @@ section.about-section {
 section.about-section .contents {
     display: grid;
     grid-template-columns: 3fr 9fr;
+    column-gap: 5px;
 }
 
 section.about-section .left-content {
-    background: lightblue;
+    display: flex;
+    align-items: center;
 }
 
 section.about-section .right-content {
     position: relative;
-    background: lightgreen;
     z-index: 1;
 }
 
 section.about-section .right-content::before {
     position: absolute;
     left: -2%;
-    top: 30%;
+    top: 40%;
     content: '';
     border-top: 25px solid transparent;
-	border-right: 50px solid #2f3640;
+	border-right: 50px solid hsl(0, 0%, 90%);
 	border-bottom: 25px solid transparent;
     z-index: -1;
 }
 
 section.about-section .right-content .content-box {
-    background: #2f3640;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     height: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    background: var(--white); /* #2f3640 */
+}
+
+section.about-section .left-content img {
+    height: 250px;
+    margin: 0 auto 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid hsl(0, 0%, 70%);
+    box-shadow: 0 10px 15px 5px #2f364015;
 }
 
 
@@ -640,6 +655,10 @@ section.about-section .right-content .content-box {
 /*=================================================================*/
 
 @media screen and (max-width: 768px) {
+    .section-title {
+        margin-bottom: 30px;
+    }
+
     .container {
         padding: 0 20px;
     }
@@ -675,6 +694,19 @@ section.about-section .right-content .content-box {
 
     section.hero-section {
         height: 100vh;
+    }
+
+    section.about-section .contents {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    section.about-section .right-content::before {
+        display: none;
+    }
+
+    section.about-section .right-content .content-box {
+        grid-template-columns: 1fr;
     }
 }
 
