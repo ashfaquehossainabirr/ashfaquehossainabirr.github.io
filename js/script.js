@@ -86,3 +86,22 @@ navIcon.addEventListener('click', () => {
   header.classList.toggle("active-nav")
   navMenu.classList.toggle("active-nav")
 })
+
+
+// ==========================================================
+// -- About Section Active Status
+// ==========================================================
+
+const activeStatus = document.querySelector(".active-status");
+const availabilityText = document.querySelector(".availability-status");
+
+activeStatus.style.backgroundColor = "var(--active-status-red)"
+availabilityText.innerHTML = "Not Available";
+
+
+// =======================================================
+// -- Get Author's Age
+// =======================================================
+
+const age = new Date().getFullYear() - 2000;
+document.getElementById('age').innerHTML = age;
