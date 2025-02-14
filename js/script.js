@@ -1,14 +1,14 @@
 $(window).on("load", function () {
   /*=========================================================================
    Preloader
-   =========================================================================*/
+  =========================================================================*/
   
   $("#preloader").delay(350).fadeOut("slow");
 
 
   /*=========================================================================
-     Wow Initialize
-     =========================================================================*/
+    Wow Initialize
+  =========================================================================*/
   // Here will be the WoW Js implementation.
   setTimeout(function () {
     new WOW().init();
@@ -25,7 +25,7 @@ $(function () {
 
   /*=========================================================================
    Parallax layers
-   =========================================================================*/
+  =========================================================================*/
 
    if($(".parallax").length > 0) {
     var scene = $(".parallax").get(0);
@@ -37,7 +37,7 @@ $(function () {
 
   /*=========================================================================
    Text Rotating
-   =========================================================================*/
+  =========================================================================*/
    
   $(".text-rotating").Morphext({
     // The [in] animation type. Refer to Animate.css for a list of available animations.
@@ -52,8 +52,8 @@ $(function () {
   });
 
   /*=========================================================================
-     Spacer with Data Attribute
-     =========================================================================*/
+    Spacer with Data Attribute
+  =========================================================================*/
   var list = document.getElementsByClassName("spacer");
 
   for (var i = 0; i < list.length; i++) {
@@ -62,14 +62,37 @@ $(function () {
   }
 
   /*=========================================================================
-     Background Color with Data Attribute
-     =========================================================================*/
+    Background Color with Data Attribute
+  =========================================================================*/
   var list = document.getElementsByClassName("data-background");
 
   for (var i = 0; i < list.length; i++) {
     var color = list[i].getAttribute("data-color");
     list[i].style.backgroundColor = "" + color + "";
   }
+
+
+  /*=========================================================================
+          Scroll to Top
+  =========================================================================*/
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 350) {
+      // If page is scrolled more than 50px
+      $("#return-to-top").fadeIn(200); // Fade in the arrow
+    } else {
+      $("#return-to-top").fadeOut(200); // Else fade out the arrow
+    }
+  });
+  $("#return-to-top").on("click", function (event) {
+    // When arrow is clicked
+    event.preventDefault();
+    $("body,html").animate(
+      {
+        scrollTop: 0, // Scroll to top of body
+      },
+      400
+    );
+  });
 });
 
 
