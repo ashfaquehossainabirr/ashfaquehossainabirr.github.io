@@ -814,6 +814,17 @@ section.about-section .contents .github-btn a:active {
 /*              Media Queries (Responsive Devices)                           
 /*=================================================================*/
 
+@media screen and (max-width: 1200px) {
+    section.about-section .contents {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    section.about-section .right-content::before {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .section-title {
         margin-bottom: 30px;
@@ -855,15 +866,6 @@ section.about-section .contents .github-btn a:active {
 
     section.hero-section {
         height: 100vh;
-    }
-
-    section.about-section .contents {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-    }
-
-    section.about-section .right-content::before {
-        display: none;
     }
 
     section.about-section .right-content .content-box {
