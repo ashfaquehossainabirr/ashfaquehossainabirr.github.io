@@ -709,7 +709,7 @@ section.about-section .contents .github-btn a:active {
     position: relative;
     max-width: 500px;
     width: 100%;
-    background: #fff;
+    background: var(--white);
     margin: 0 auto;
     padding: 10px 20px;
     border-radius: 7px;
@@ -740,29 +740,33 @@ section.about-section .contents .github-btn a:active {
     display: block;
     height: 100%;
     border-radius: 6px;
-    background: #4070f4;
     animation: progress 0.5s ease-in-out forwards;
     opacity: 0;
+    /* background: #4070f4; */
 }
 
-.skill-per.html {
+.skill-per.html-css {
     width: 90%;
     animation-delay: 0.5s;
-}
-
-.skill-per.css {
-    width: 70%;
-    animation-delay: 0.5s;
+    background: #ff5e57;
 }
 
 .skill-per.javascript {
-    width: 50%;
+    width: 80%;
     animation-delay: 0.5s;
+    background: #6157ff;
+}
+
+.skill-per.react-js {
+    width: 75%;
+    animation-delay: 0.5s;
+    background: #00A8FF;
 }
 
 .skill-per.nodejs {
-    width: 30%;
+    width: 70%;
     animation-delay: 0.5s;
+    background: #00c88f;
 }
 
 @keyframes progress {
