@@ -809,6 +809,61 @@ section.about-section .contents .github-btn a:active {
 }
 
 
+/*================================================= 
+-- Services Section
+=================================================*/
+
+section.services-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+section.services-section .container {
+    max-width: 1200px;
+}
+
+section.services-section .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 48px;
+    margin-top: 48px;
+}
+
+section.services-section .service-boxes .service-box {
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 20px;
+    background: #18191a;
+}
+
+section.services-section .service-boxes .service-box:hover h2 {
+    cursor: pointer;
+    color: var(--accent);
+}
+
+section.services-section .service-boxes .service-box img {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+section.services-section .service-boxes .service-box h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* color: var(--font-primary); */
+    transition: var(--trans-fast);
+    color: var(--white);
+}
+
+section.services-section .service-boxes .service-box p {
+    /* color: var(--font-secondary); */
+    transition: var(--trans-fast);
+    color: var(--white);
+}
+
+
 
 /*=================================================================*/
 /*              Media Queries (Responsive Devices)                           
@@ -822,6 +877,16 @@ section.about-section .contents .github-btn a:active {
 
     section.about-section .right-content::before {
         display: none;
+    }
+}
+
+@media screen and (max-width: 999px) {  
+    /* ------------------------------------------
+    --- Services Section
+    ------------------------------------------ */
+
+    section.services-section .service-boxes {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -874,6 +939,14 @@ section.about-section .contents .github-btn a:active {
 
     section.about-section .right-content .content-box .skill-items {
         margin-top: 30px;
+    }
+
+    /* ------------------------------------------
+    --- Services Section
+    ------------------------------------------ */
+
+    section.services-section .service-boxes {
+        grid-template-columns: 1fr;
     }
 }
 
