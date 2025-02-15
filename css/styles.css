@@ -38,6 +38,8 @@ html {
     --active-status-green: #00df6f;
     --active-status-red: #FF0000;
 
+    --footer-background: hsl(229, 76%, 36%);
+
 
     /*------------------------------
     ** Transitions
@@ -168,6 +170,14 @@ h4 {
 /*=================================================================*/
 /*                      Common Styles                           
 /*=================================================================*/
+
+a.text-link {
+    color: var(--accent-dark);
+}
+
+a.text-link:hover {
+    text-decoration: underline;
+}
 
 .text-center {
     text-align: center;
@@ -1291,6 +1301,120 @@ section.review {
 }
 
 
+/*================================================= 
+-- Contact Section
+=================================================*/
+
+section.contact-section {
+    padding: 100px 0;
+    background: #f9f9ff;
+}
+
+section.contact-section .contents {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+}
+
+section.contact-section .contents .left {
+    background: url("../images/map.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+section.contact-section .contents .right form {
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--white);
+}
+
+section.contact-section .contents .right form .info-input {
+    display: flex;
+    column-gap: 20px;
+}
+
+section.contact-section .contents .right form input#subjectInput {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section.contact-section .contents .right form input {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 80%);
+}
+
+section.contact-section .contents .right form input:focus {
+    border-color: var(--accent);
+}
+
+section.contact-section .contents .right form textarea {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: 150px;
+    max-height: 250px;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 80%);
+}
+
+section.contact-section .contents .right form textarea:focus {
+    border-color: var(--accent);
+}
+
+section.contact-section .contents button.submit-btn {
+    position: relative;
+    margin: 0 auto; 
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 20px; 
+    color: var(--white);
+    background: var(--accent-dark);
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+section.contact-section .contents button.submit-btn:hover {
+    -webkit-animation-name: button-push;
+    animation-name: button-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+section.contact-section .contents button.submit-btn:active {
+    background: var(--accent);
+}
+
+
+/*================================================= 
+-- Footer Section
+=================================================*/
+
+footer {
+    padding: 24px 0;
+    background: var(--footer-background);
+}
+
+footer p.footer-text {
+    text-align: center;
+    color: var(--white);
+}
+
+
 
 /* ========================================================== */
 
@@ -1378,6 +1502,23 @@ section.review {
     section.services-section .service-boxes {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    /* ------------------------------------------
+    --- Contact Section
+    ------------------------------------------ */
+
+    section.contact-section .contents {
+        grid-template-columns: 1fr;
+    }
+
+    section.contact-section .contents .left {
+        background: none;
+    }
+
+    section.contact-section .contents .right {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1438,6 +1579,25 @@ section.review {
     section.services-section .service-boxes {
         grid-template-columns: 1fr;
     }
+
+
+    /* ------------------------------------------
+    --- Contact Section
+    ------------------------------------------ */
+
+    section.contact-section .contents .right form .info-input {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+
+    /* ------------------------------------------
+    --- Footer Section
+    ------------------------------------------ */
+
+    footer p.footer-text {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1484,5 +1644,14 @@ section.review {
     .parallax .p11 {
       bottom: 10%;
       right: 10%;
+    }
+
+
+    /* ------------------------------------------
+    --- Footer Section
+    ------------------------------------------ */
+
+    footer p.footer-text {
+        font-size: 12px;
     }
 }

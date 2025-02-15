@@ -164,3 +164,14 @@ $(".testimonials-wrapper").slick({
   autoplay: true,
   autoplaySpeed: 3000,
 });
+
+
+// ==========================================================
+// -- Get Year
+// ==========================================================
+
+const date = new Date();
+const yearText = document.getElementById("year");
+
+let year = date.getFullYear();
+yearText.innerHTML = year;
