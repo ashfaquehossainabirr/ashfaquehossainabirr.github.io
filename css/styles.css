@@ -1100,6 +1100,36 @@ p.label-content {
     background-color: hsl(0, 0%, 50%);
 }
 
+section.work-section button.project-btn {
+    position: relative;
+    margin: 30px auto 0; 
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 20px; 
+    color: var(--white);
+    background: var(--accent-dark);
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+section.work-section button.project-btn:hover {
+    -webkit-animation-name: button-push;
+    animation-name: button-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+section.work-section button.project-btn:active {
+    background: var(--accent);
+}
+
 
 /*================================================= 
 -- Review Section
@@ -1320,6 +1350,10 @@ section.contact-section .contents .left {
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+}
+
+section.contact-section .contents .left h3 {
+    margin-bottom: 10px;
 }
 
 section.contact-section .contents .right form {
