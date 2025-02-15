@@ -1624,6 +1624,10 @@ footer p.footer-text {
         row-gap: 20px;
     }
 
+    section.contact-section .contents .right form textarea {
+        resize: none;
+    }
+
 
     /* ------------------------------------------
     --- Footer Section
