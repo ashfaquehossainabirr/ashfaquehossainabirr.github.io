@@ -136,6 +136,7 @@ button {
 /*=================================================================*/
 /*                      TYPOGRAPHY                              
 /*=================================================================*/
+
 h1,
 h2,
 h3,
@@ -162,6 +163,68 @@ h3 {
 h4 {
     font-size: 18px;
 } */
+
+
+/*=================================================================*/
+/*                      Common Styles                           
+/*=================================================================*/
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.mb-3 {
+    margin-bottom: 12px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.bg-white {
+    background: hsl(229, 76%, 96%);
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.shadow-dark {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(47, 54, 64, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(47, 54, 64, 0.1);
+}
+
+.rounded {
+    border-radius: 20px !important;
+}
+
+.triangle-top:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    -webkit-transform: translateX(-7.5px);
+    -ms-transform: translateX(-7.5px);
+    transform: translateX(-7.5px);
+}
+
+.position-relative {
+    position: relative;
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+ 
 
 
 /*=======================================| Web Styles starting from here |=======================================*/
@@ -1025,6 +1088,206 @@ p.label-content {
 
 .circle-btn:active {
     background-color: hsl(0, 0%, 50%);
+}
+
+
+/*================================================= 
+-- Review Section
+=================================================*/
+
+section.review {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.testimonials-wrapper {
+    max-width: 700px;
+    margin: auto;
+}
+  
+.testimonial-item {
+    padding: 0 20px 20px;
+}
+
+.testimonial-item .thumb {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 90px;
+    width: 90px;
+}
+
+.testimonial-item .subtitle {
+    color: var(--accent-dark);
+    font-size: 14px;
+}
+
+.testimonial-item p {
+    font-size: 16px;
+}
+
+
+/*=================================================================*/
+/*                      SLICK SETTINGS
+/*=================================================================*/
+
+.slick-slide {
+    height: auto;
+    outline: none;
+}
+
+.slick-next,
+.slick-prev {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #454360;
+    border-radius: 0;
+    top: calc(50% - 40px);
+    z-index: 1;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+  
+.slick-next:hover,
+.slick-next:focus,
+.slick-prev:hover,
+.slick-prev:focus {
+    background: #454360;
+}
+  
+.slick-prev {
+    left: 0;
+}
+
+.slick-prev:hover {
+    background: #454360;
+}
+  
+.slick-next {
+    right: 0;
+}
+
+.slick-next:hover {
+    background: #454360;
+}
+  
+.slick-next:before,
+.slick-next:after {
+    left: 20px;
+}
+  
+.slick-prev:before,
+.slick-prev:after {
+    left: 17px;
+}
+  
+.slick-prev:before {
+    content: "";
+    background: #fff;
+    display: block;
+    width: 1px;
+    height: 14px;
+    top: 8px;
+    position: absolute;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+  
+.slick-prev:after {
+    content: "";
+    background: #fff;
+    display: block;
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+    -ms-transform: rotate(135deg);
+    /* IE 9 */
+    -webkit-transform: rotate(135deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(135deg);
+}
+  
+.slick-next:before {
+    content: "";
+    background: #fff;
+    display: block;
+    width: 1px;
+    height: 14px;
+    top: 8px;
+    position: absolute;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+  
+.slick-next:after {
+    content: "";
+    background: #fff;
+    display: block;
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+  
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+  
+.slick-dots {
+    position: relative;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+  
+.slick-dots li {
+    width: 10px;
+    height: 6px;
+    margin: 0 5px;
+}
+  
+.slick-dots li.slick-active {
+    width: 20px;
+    height: 6px;
+}
+  
+.slick-dots li button {
+    width: 10px;
+    height: 6px;
+    padding: 0;
+}
+  
+.slick-dots li.slick-active button:before {
+    background: var(--accent);
+    border-radius: 3px;
+    opacity: 1;
+    height: 6px;
+    width: 20px;
+    transition: var(--trans-fast);
+}
+  
+.slick-dots li button:before {
+    content: "";
+    background: hsl(229, 76%, 86%);
+    border-radius: 3px;
+    opacity: 1;
+    height: 6px;
+    width: 10px;
+    transition: var(--trans-fast);
 }
 
 

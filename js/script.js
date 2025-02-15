@@ -153,3 +153,14 @@ availabilityText.innerHTML = "Not Available";
 
 const age = new Date().getFullYear() - 2000;
 document.getElementById('age').innerHTML = age;
+
+
+/*=========================================================================
+            Slick Slider
+=========================================================================*/
+$(".testimonials-wrapper").slick({
+  dots: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+});
