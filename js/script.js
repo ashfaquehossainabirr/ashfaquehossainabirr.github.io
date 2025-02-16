@@ -227,54 +227,54 @@ const thumbnailHeadlineSix = document.getElementById("thumbnail-headline-six")
 
 
 // Project 1
-projectImageOne.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkOne.setAttribute('href', 'https://www.youtube.com')
-projectTextOne.innerHTML = "Coming Soon"
+projectImageOne.setAttribute('src', './images/works/thumbnails/project-1.png')
+projectLinkOne.setAttribute('href', 'https://ashfaquehossainabirr.github.io/agenc/')
+projectTextOne.innerHTML = "Agenc"
 
 labelContentOne.innerHTML = "Website"
-thumbnailHeadlineOne.innerHTML = "E-Commerce Website"
+thumbnailHeadlineOne.innerHTML = "Agency Website"
 
 
 // Project 2
-projectImageTwo.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkTwo.setAttribute('href', 'https://www.youtube.com')
-projectTextTwo.innerHTML = "Coming Soon"
+projectImageTwo.setAttribute('src', './images/works/thumbnails/project-2.png')
+projectLinkTwo.setAttribute('href', 'https://ashfaquehossainabirr.github.io/bmi-calculator/')
+projectTextTwo.innerHTML = "BMI App"
 
-labelContentTwo.innerHTML = "Website"
-thumbnailHeadlineTwo.innerHTML = "E-Commerce Website"
+labelContentTwo.innerHTML = "Web App"
+thumbnailHeadlineTwo.innerHTML = "BMI Calculator"
 
 
 // Project 3
-projectImageThree.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkThree.setAttribute('href', 'https://www.youtube.com')
-projectTextThree.innerHTML = "Coming Soon"
+projectImageThree.setAttribute('src', './images/works/thumbnails/project-3.png')
+projectLinkThree.setAttribute('href', 'https://ashfaquehossainabirr.github.io/stopwatch-project/')
+projectTextThree.innerHTML = "Stopwatch"
 
-labelContentThree.innerHTML = "Website"
-thumbnailHeadlineThree.innerHTML = "E-Commerce Website"
+labelContentThree.innerHTML = "Web App"
+thumbnailHeadlineThree.innerHTML = "Stopwatch App"
 
 
 // Project 4
 projectImageFour.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkFour.setAttribute('href', 'https://www.youtube.com')
+projectLinkFour.setAttribute('href', 'https://ashfaquertc.github.io/coming-soon')
 projectTextFour.innerHTML = "Coming Soon"
 
 labelContentFour.innerHTML = "Website"
-thumbnailHeadlineFour.innerHTML = "E-Commerce Website"
+thumbnailHeadlineFour.innerHTML = "Project Coming Soon"
 
 
 // Project 5
 projectImageFive.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkFive.setAttribute('href', 'https://www.youtube.com')
+projectLinkFive.setAttribute('href', 'https://ashfaquertc.github.io/coming-soon')
 projectTextFive.innerHTML = "Coming Soon"
 
 labelContentFive.innerHTML = "Website"
-thumbnailHeadlineFive.innerHTML = "E-Commerce Website"
+thumbnailHeadlineFive.innerHTML = "Project Coming Soon"
 
 
 // Project 6
 projectImageSix.setAttribute('src', './images/works/thumbnails/thumbnail.png')
-projectLinkSix.setAttribute('href', 'https://www.youtube.com')
+projectLinkSix.setAttribute('href', 'https://ashfaquertc.github.io/coming-soon')
 projectTextSix.innerHTML = "Coming Soon"
 
 labelContentSix.innerHTML = "Website"
-thumbnailHeadlineSix.innerHTML = "E-Commerce Website"
+thumbnailHeadlineSix.innerHTML = "Project Coming Soon"
