@@ -400,6 +400,10 @@ nav .nav-menu-section ul li:hover a {
     transform: translate(0, -9px) rotate(45deg);
 }
 
+header nav ul li.active a {
+    color: var(--accent);
+}
+
 
 /*================================================= 
 -- Hero Section
