@@ -1624,9 +1624,9 @@ footer p.footer-text {
         display: flex;
     }
 
-    section.hero-section {
+    /* section.hero-section {
         height: 100vh;
-    }
+    } */
 
     section.about-section .right-content .content-box {
         grid-template-columns: 1fr;
