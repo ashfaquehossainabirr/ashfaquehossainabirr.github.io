@@ -1625,7 +1625,7 @@ footer p.footer-text {
     }
 
     section.hero-section {
-        height: 700px;
+        height: 100vh; /* 700px */
     }
 
     section.about-section .right-content .content-box {
