@@ -343,8 +343,27 @@ nav .logo-section a {
     column-gap: 10px;
 }
 
-nav .logo-section h1 {
+/* nav .logo-section h1 {
     color: var(--white);
+} */
+
+nav .logo-section h1.gradient-text {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff00cc, #6666ff, #00ffcc, #ffcc00, #ff00cc);
+    background-size: 1000% 1000%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 15s infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
 }
 
 nav .nav-menu-section {
